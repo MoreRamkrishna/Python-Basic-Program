@@ -1,0 +1,21 @@
+n = int(input(" 1-add\n 2-sub\n 3-mul\n 4-div\n 5-prst\n Enter the Calculator Number: "))
+while n!=6:
+  if n <= 5 and n >=1:
+    a = int(input(" Enter the 1st number: "))
+    b = int(input(" Enter the 2nd number: "))
+  if n == 1:
+    print(a+b)
+  if n == 2:
+    print(a-b)
+  if n == 3:
+    print(a*b)
+  if n == 4:
+    print(a//b)
+  if n == 5:
+    print(a%b)
+  elif n < 1 or n > 6:
+    print(" Invalid Input")
+    if n < 6:
+      print(" Enter the exit Calaulater")
+    break
+  n = int(input())
