@@ -1,0 +1,10 @@
+start = int(input("Enter Start"))
+end = int(input("Enter End"))
+step = int(input("Enter Step"))
+
+curr_temp = start
+
+while curr_temp <= end:
+    c = 5/9 * (curr_temp-32)
+    print(curr_temp, " ", int(c))
+    curr_temp = curr_temp+step
