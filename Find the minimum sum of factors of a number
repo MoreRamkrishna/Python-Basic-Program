@@ -1,0 +1,20 @@
+
+import math
+
+def min_sum_of_factors(n):
+    min_sum = float('inf')  # Start with infinity, so any sum will be smaller
+    
+    # Iterate through all potential divisors from 1 to sqrt(n)
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            # i is a factor, and n // i is the corresponding factor pair
+            pair_factor = n // i
+            factor_sum = i + pair_factor
+            min_sum = min(min_sum, factor_sum)
+    
+    return min_sum
+
+# Example usage:
+num = int(input("Enter a number: "))
+result = min_sum_of_factors(num)
+print(f"The minimum sum of the factors of {num} is: {result}")
