@@ -1,0 +1,11 @@
+import math
+
+def tetrahedron_area(a):
+    # Formula for the area of a regular tetrahedron: √3 * a^2
+    return math.sqrt(3) * (a ** 2)
+
+# Example usage
+a = float(input("Enter the side length of the tetrahedron: "))
+area = tetrahedron_area(a)
+
+print(f"The surface area of the tetrahedron with side length {a} is: {area:.2f}")
