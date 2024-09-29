@@ -1,0 +1,26 @@
+def smallest_k_digit_number_divisible_by_x(k, x):
+    # Smallest K digit number is 10^(k-1)
+    smallest_k_digit = 10**(k-1)
+    
+    # Find the smallest number divisible by x
+    if smallest_k_digit % x == 0:
+        return smallest_k_digit
+    else:
+        return smallest_k_digit + (x - smallest_k_digit % x)
+
+def largest_k_digit_number_divisible_by_x(k, x):
+    # Largest K digit number is 10^k - 1
+    largest_k_digit = 10**k - 1
+    
+    # Find the largest number divisible by x
+    return largest_k_digit - (largest_k_digit % x)
+
+# Example usage
+k = int(input("Enter the value of K (number of digits): "))
+x = int(input("Enter the value of X (divisor): "))
+
+smallest = smallest_k_digit_number_divisible_by_x(k, x)
+largest = largest_k_digit_number_divisible_by_x(k, x)
+
+print(f"The smallest {k}-digit number divisible by {x} is: {smallest}")
+print(f"The largest {k}-digit number divisible by {x} is: {largest}")
