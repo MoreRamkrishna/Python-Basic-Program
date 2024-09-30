@@ -1,0 +1,27 @@
+def all_digits_divide_number(n):
+    # Convert the number to a string to access individual digits
+    num_str = str(n)
+    
+    # Traverse each digit in the number
+    for digit in num_str:
+        # Convert digit back to an integer
+        digit = int(digit)
+        
+        # Skip division by 0 for the digit 0
+        if digit == 0:
+            return False
+        
+        # Check if the number is divisible by the digit
+        if n % digit != 0:
+            return False
+    
+    return True
+
+# Input the number from the user
+number = int(input("Enter a number: "))
+
+# Check if all digits divide the number
+if all_digits_divide_number(number):
+    print(f"All digits of {number} divide it.")
+else:
+    print(f"Not all digits of {number} divide it.")
