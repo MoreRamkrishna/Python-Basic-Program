@@ -1,0 +1,13 @@
+# Calculate Multiplication and if it is less than or equal to 1000. otherwise, return their sum.
+def multiplication_or_sum(): 
+    num1 = int(input("Enter First Number: ")) 
+    num2 = int(input("Enter Second Number: ")) 
+    product = num1 * num2
+
+    if product <= 1000:
+        return product
+    else:
+        return num1 + num2
+        
+result = multiplication_or_sum() 
+print(result) 
