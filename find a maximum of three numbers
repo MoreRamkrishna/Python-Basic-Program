@@ -1,22 +1,25 @@
 # Write a program to find a maximum of three numbers.
 def maximum(a, b, c):
-
     if (a >= b) and (a >= c):
         largest = a
-
     elif (b >= a) and (b >= c):
         largest = b
     else:
         largest = c
-        
-    return largest
+    return largest  # Return should be at the same level as the if-else
 
-
+# Input three numbers
 a = int(input("Enter a number: "))
-# Input1: 10
-b = int(input("Enter a number: "))
-# Input2: 14
-c = int(input("Enter a number: "))
-# Input3: 12
-print(maximum(a, b, c))
-# Output: 14
+b = int(input("Enter b number: "))
+c = int(input("Enter c number: "))
+
+# Call the function and print the result
+print("The maximum of the three numbers is:", maximum(a, b, c))
+
+
+Example Output:
+Copy code
+Enter a number: 5
+Enter b number: 8
+Enter c number: 3
+The maximum of the three numbers is: 8
